@@ -1,6 +1,9 @@
+/* eslint "jsx-a11y/no-access-key": 0 */
+
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Badge from "./Badge";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 const BarraDeAcessibilidade = props => (
   <div
@@ -34,6 +37,10 @@ const BarraDeAcessibilidade = props => (
           <Badge link="#" onClick={e => props.onClick(e)}>
             <FontAwesomeIcon icon="adjust" className="mr-1" />
             <span className="d-none d-sm-inline-block">Alto contraste</span>
+          </Badge>
+          <Badge link="/contato">
+            <FontAwesomeIcon icon={faInfoCircle} className="mr-1" />
+            <span className="d-none d-sm-inline-block">Contato</span>
           </Badge>
           <Badge link="/mapa-do-site">
             <FontAwesomeIcon icon="globe" className="mr-1" />
